@@ -53,12 +53,82 @@
                 </div>
             </div>
         </div>
+        <!-- Product Detail Section -->
+         </div> <section id="product-detail-section"></section>
+        
+         <div class="shop-container">
+   <aside class="sidebar">
+    <div class="filter-header">
+        <h3>Filters</h3>
+    </div>
 
-        <div class="footer-cta">
-            <h2>Don't Miss Out New Drops</h2>
-            <button class="btn-shop" style="background-color: #4f6bf5;">Shop New Drops</button>
+    <div class="filter-group">
+        <h4>Refine by</h4>
+        <div class="refine-tags">
+            <span class="tag-pill active">Mens</span>
+            <span class="tag-pill active">Casual</span>
         </div>
     </div>
 
+    <div class="filter-group">
+        <h4>Size</h4>
+        <div class="size-filter-grid">
+            <button class="filter-size-btn" onclick="toggleFilter('size', 38)">38</button>
+            <button class="filter-size-btn" onclick="toggleFilter('size', 39)">39</button>
+            <button class="filter-size-btn" onclick="toggleFilter('size', 40)">40</button>
+            <button class="filter-size-btn" onclick="toggleFilter('size', 41)">41</button>
+            <button class="filter-size-btn" onclick="toggleFilter('size', 42)">42</button>
+            <button class="filter-size-btn" onclick="toggleFilter('size', 43)">43</button>
+            <button class="filter-size-btn" onclick="toggleFilter('size', 44)">44</button>
+            <button class="filter-size-btn" onclick="toggleFilter('size', 45)">45</button>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Color</h4>
+        <div class="color-filter-grid">
+            <div class="filter-color-btn" style="background-color: #4f6bf5;" onclick="toggleFilter('color', '#4f6bf5', this)"></div>
+            <div class="filter-color-btn" style="background-color: #ffaa00;" onclick="toggleFilter('color', '#ffaa00', this)"></div>
+            <div class="filter-color-btn" style="background-color: #222222;" onclick="toggleFilter('color', '#222222', this)"></div>
+            <div class="filter-color-btn" style="background-color: #1a4d2e;" onclick="toggleFilter('color', '#1a4d2e', this)"></div>
+            <div class="filter-color-btn" style="background-color: #555555;" onclick="toggleFilter('color', '#555555', this)"></div>
+            <div class="filter-color-btn" style="background-color: #FFFFFF; border:1px solid #ccc;" onclick="toggleFilter('color', '#FFFFFF', this)"></div>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Brand</h4>
+        <div class="checkbox-list">
+            <label class="custom-checkbox"><input type="checkbox" value="Nike" onchange="toggleFilter('brand', 'Nike')"> Nike</label>
+            <label class="custom-checkbox"><input type="checkbox" value="Adidas" onchange="toggleFilter('brand', 'Adidas')"> Adidas</label>
+            <label class="custom-checkbox"><input type="checkbox" value="Jordan" onchange="toggleFilter('brand', 'Jordan')"> Jordan</label>
+            <label class="custom-checkbox"><input type="checkbox" value="Puma" onchange="toggleFilter('brand', 'Puma')"> Puma</label>
+        </div>
+    </div>
+
+    <div class="filter-group" style="border:none;">
+        <h4>Price</h4>
+        <input type="range" id="priceRange" min="0" max="1000" value="1000" step="10" oninput="updatePrice(this.value)">
+        <div class="price-labels">
+            <span>$0</span> <span id="priceValue" style="font-weight:bold;">$1000</span>
+        </div>
+    </div>
+</aside>
+
+    <main class="main-content">
+        <div class="content-header">
+            <h2 class="section-title">Life Style Shoes</h2>
+            <span id="product-count" style="color:#666;">(20 items)</span>
+        </div>
+
+        <div class="product-grid" id="grid-container">
+            </div>
+
+        <div id="pagination" class="pagination-container">
+            </div>
+    </main>
+</div>
+    <script src="../../globals/initilization.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
